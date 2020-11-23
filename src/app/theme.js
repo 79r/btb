@@ -21,6 +21,6 @@ export const theme = createMuiTheme({
   },
 
   /** Custom variables */
-  toolBarWidth: 54,
-  panelBarWidth: 240,
+  activityBarWidth: 54,
+  sideBarWidth: 240,
 });

@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     top: 0,
-    left: theme.toolBarWidth + theme.panelBarWidth,
+    left: theme.activityBarWidth + theme.sideBarWidth,
     height: "100%",
     width: "auto",
     backgroundColor: "#fbfbfb",

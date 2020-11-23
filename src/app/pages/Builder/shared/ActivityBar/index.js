@@ -13,7 +13,8 @@ const useStyles = makeStyles((theme) => ({
     left: 0,
     height: "100%",
     backgroundColor: "#e3e7ff",
-    width: theme.toolBarWidth,
+    width: theme.activityBarWidth,
+    zIndex: 6,
   },
   toolbar: {
     textAlign: "center",

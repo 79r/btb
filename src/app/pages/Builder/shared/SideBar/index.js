@@ -9,10 +9,15 @@ const useStyles = makeStyles((theme) => ({
   root: {
     position: "fixed",
     top: 0,
-    left: theme.toolBarWidth,
+    left: theme.activityBarWidth,
     height: "100%",
-    width: theme.panelBarWidth,
+    width: theme.sideBarWidth,
     backgroundColor: "#fff",
+    boxShadow: "2px 0px 10px 0 rgba(0,0,0,0.1)",
+    zIndex: 5,
+    "&.hide": {
+      left: -theme.activityBarWidth + theme.sideBarWidth,
+    },
   },
   panelbar: {
     // padding: theme.spacing(2, 3),
