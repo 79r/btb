@@ -7,9 +7,9 @@ export const theme = createMuiTheme({
   },
   palette: {
     primary: {
-      light: "#757ce8",
-      main: "#00b7b3",
-      dark: "#009292",
+      light: "#ffcfdc",
+      main: "#ff1440",
+      dark: "#e0003e",
       contrastText: "#fff",
     },
     secondary: {
@@ -19,4 +19,8 @@ export const theme = createMuiTheme({
       contrastText: "#fff",
     },
   },
+
+  /** Custom variables */
+  toolBarWidth: 54,
+  panelBarWidth: 240,
 });

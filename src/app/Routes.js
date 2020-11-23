@@ -3,14 +3,18 @@ import { Switch, Route } from "react-router-dom";
 
 /** pages */
 import HomePage from "./pages/HomePage";
-import StartPage from "./pages/StartPage";
+import Builder from "./pages/Builder";
+import Templates from "./pages/Templates";
+
+import PreloadScreen from "./PreloadScreen";
 
 const Routes = () => {
   return (
-    <Suspense fallback="Loading...">
+    <Suspense fallback={<PreloadScreen />}>
       <Switch>
         <Route path="/" component={HomePage} exact />
-        <Route path="/start" component={StartPage} />
+        <Route path="/start" component={Builder} />
+        <Route path="/templates" component={Templates} />
       </Switch>
     </Suspense>
   );
