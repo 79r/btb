@@ -1,8 +1,10 @@
+import { useDispatch } from "react-redux";
+import { closeSidebar } from "../../../../redux/actions/appActions";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import CloseIcon from "@material-ui/icons/Close";
+import ArrowBackIcon from "@material-ui/icons/ArrowBack";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,12 +17,22 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const SideBarHeader = () => {
+  const dispatch = useDispatch();
   const classes = useStyles();
+
+  const handleClickArrowBack = () => {
+    dispatch(closeSidebar());
+  };
+
   return (
     <Box className={classes.root}>
       <Typography component="h2">Your Project Name</Typography>
-      <IconButton size="small" aria-label="Close panel bar">
-        <CloseIcon fontSize="small" />
+      <IconButton
+        onClick={handleClickArrowBack}
+        size="small"
+        aria-label="Close panel bar"
+      >
+        <ArrowBackIcon fontSize="small" />
       </IconButton>
     </Box>
   );

@@ -1,14 +1,23 @@
+import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
+import dotImg from "./dot.jpg";
+import TopSection from "./shared/TopSection";
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    width: "100%",
+    transition: theme.transitions.create("padding"),
+    backgroundImage: `url(${dotImg})`,
+    backgroundRepeat: "repeat",
     position: "fixed",
     top: 0,
-    left: theme.activityBarWidth + theme.sideBarWidth,
+    paddingLeft: theme.activityBarWidth + theme.sideBarWidth,
     height: "100%",
-    width: "auto",
     backgroundColor: "#fbfbfb",
+    "&.noSidebar": {
+      paddingLeft: theme.activityBarWidth,
+    },
   },
   mainboard: {
     display: "flex",
@@ -19,8 +28,10 @@ const useStyles = makeStyles((theme) => ({
 
 const MainBoard = () => {
   const classes = useStyles();
+  const showSidebar = useSelector((state) => state.app.showSidebar);
   return (
-    <Box className={classes.root}>
+    <Box className={`${classes.root} ${showSidebar ? "withSidebar" : "noSidebar"}`}>
+      <TopSection />
       <div className={classes.mainboard}>Main Board</div>
     </Box>
   );
