@@ -3,6 +3,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import dotImg from "./dot.jpg";
 import TopSection from "./shared/TopSection";
+import BottomSection from "./shared/BottomSection";
+import Preview from "./shared/Preview";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,7 +34,10 @@ const MainBoard = () => {
   return (
     <Box className={`${classes.root} ${showSidebar ? "withSidebar" : "noSidebar"}`}>
       <TopSection />
-      <div className={classes.mainboard}>Main Board</div>
+      <div className={classes.mainboard}>
+        <Preview />
+      </div>
+      <BottomSection />
     </Box>
   );
 };

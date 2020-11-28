@@ -14,7 +14,6 @@ const Export = () => {
   return (
     <Box className={classes.root}>
       <Button
-        disableElevation
         color="primary"
         variant="contained"
         aria-label="Export to XML"

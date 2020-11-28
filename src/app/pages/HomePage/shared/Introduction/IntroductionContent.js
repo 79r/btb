@@ -56,7 +56,6 @@ const IntroductionContent = () => {
       <Box className={classes.buttonContainer}>
         <Button
           onClick={() => go("/start")}
-          disableElevation
           color="primary"
           variant="contained"
         >
