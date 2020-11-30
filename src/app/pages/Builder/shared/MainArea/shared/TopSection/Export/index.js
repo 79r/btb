@@ -16,6 +16,7 @@ const Export = () => {
         color="secondary"
         variant="contained"
         aria-label="Export to XML"
+        size="small"
         endIcon={<ArrowForwardIcon />}
       >
         Export to .xml
