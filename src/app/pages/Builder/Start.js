@@ -1,14 +1,14 @@
 import { Fragment } from "react";
 import ActivityBar from "./shared/ActivityBar";
 import SideBar from "./shared/SideBar";
-import MainBoard from "./shared/MainBoard";
+import MainArea from "./shared/MainArea";
 
 const StartPage = () => {
   return (
     <Fragment>
       <ActivityBar />
       <SideBar />
-      <MainBoard />
+      <MainArea />
     </Fragment>
   );
 };

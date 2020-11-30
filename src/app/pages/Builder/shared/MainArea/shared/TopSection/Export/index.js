@@ -4,25 +4,24 @@ import Box from "@material-ui/core/Box";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-
-  }
-}))
+  root: {},
+}));
 
 const Export = () => {
   const classes = useStyles();
   return (
     <Box className={classes.root}>
       <Button
-        color="primary"
+        disableElevation
+        color="secondary"
         variant="contained"
         aria-label="Export to XML"
-        endIcon={ <ArrowForwardIcon />}
+        endIcon={<ArrowForwardIcon />}
       >
         Export to .xml
       </Button>
     </Box>
   );
-}
+};
 
 export default Export;

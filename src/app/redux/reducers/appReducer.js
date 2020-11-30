@@ -2,12 +2,14 @@ import {
   OPEN_SIDEBAR,
   CLOSE_SIDEBAR,
   FULLSCREEN,
-  EXIT_FULLSCREEN
+  EXIT_FULLSCREEN,
+  SET_ACTIVE_MENU_ACTIVITY_BAR,
 } from "../actions/appActions";
 
 const initialState = {
   showSidebar: true,
   fullscreen: false,
+  activeMenuActivityBar: "HOME", // default home is selected
 };
 
 export const appReducer = (state = initialState, action) => {
@@ -31,6 +33,11 @@ export const appReducer = (state = initialState, action) => {
       return {
         ...state,
         fullscreen: false,
+      };
+    case SET_ACTIVE_MENU_ACTIVITY_BAR:
+      return {
+        ...state,
+        activeMenuActivityBar: action.payload,
       };
     default:
       return state;

@@ -8,11 +8,11 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     alignItems: "center",
     padding: theme.spacing(2),
-    position: 'fixed',
+    position: "fixed",
     bottom: 0,
     // bottom: theme.spacing(2),
-  }
-}))
+  },
+}));
 
 const TopSection = () => {
   const classes = useStyles();
@@ -22,6 +22,6 @@ const TopSection = () => {
       <Snackbar />
     </div>
   );
-}
+};
 
 export default TopSection;

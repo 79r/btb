@@ -13,14 +13,14 @@ export const theme = createMuiTheme({
       contrastText: "#fff",
     },
     secondary: {
-      light: "#ff7961",
-      main: "#ffa90c",
-      dark: "#ff7500",
+      light: "#ca91ff",
+      main: "#a441ff",
+      dark: "#8a3fd0",
       contrastText: "#fff",
     },
   },
 
   /** Custom variables */
-  activityBarWidth: 54,
-  sideBarWidth: 240,
+  activityBarWidth: 48,
+  sideBarWidth: 282,
 });

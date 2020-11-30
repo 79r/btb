@@ -2,9 +2,8 @@ import { useSelector } from "react-redux";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 
-import SideBarHeader from "./SideBarHeader";
-import SideBarSearch from "./SideBarSearch";
-import SideBarMenu from "./SideBarMenu";
+import HomeContent from "./HomeContent";
+import LayoutContent from "./LayoutContent";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -13,21 +12,18 @@ const useStyles = makeStyles((theme) => ({
     left: theme.activityBarWidth,
     height: "100%",
     backgroundColor: "#fff",
-    // boxShadow: "2px 0px 10px 0 rgba(0,0,0,0.1)",
     boxShadow: theme.shadows[2],
     zIndex: 5,
-    transition: theme.transitions.create('left'),
+    transition: theme.transitions.create("left"),
     width: theme.sideBarWidth,
     "&.hide": {
       left: -(theme.activityBarWidth + theme.sideBarWidth),
     },
   },
   paper: {
-    // width: theme.sideBarWidth,
-    // left: theme.activityBarWidth,
     position: "relative",
   },
-  panelbar: {
+  sidebar: {
     // padding: theme.spacing(2, 3),
   },
 }));
@@ -35,6 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const PanelBar = () => {
   const classes = useStyles();
   const showSidebar = useSelector((state) => state.app.showSidebar);
+  const activeMenu = useSelector((state) => state.app.activeMenuActivityBar);
   return (
     <Drawer
       open
@@ -44,10 +41,11 @@ const PanelBar = () => {
         paper: classes.paper,
       }}
     >
-      <div className={classes.panelbar}>
-        <SideBarHeader />
-        <SideBarSearch />
-        <SideBarMenu />
+      <div className={classes.sidebar}>
+        {activeMenu === "HOME" && <HomeContent />}
+      </div>
+      <div className={classes.sidebar}>
+        {activeMenu === "LAYOUT" && <LayoutContent />}
       </div>
     </Drawer>
   );

@@ -3,6 +3,7 @@ export const OPEN_SIDEBAR = "OPEN_SIDEBAR";
 export const CLOSE_SIDEBAR = "CLOSE_SIDEBAR";
 export const FULLSCREEN = "FULLSCREEN";
 export const EXIT_FULLSCREEN = "EXIT_FULLSCREEN";
+export const SET_ACTIVE_MENU_ACTIVITY_BAR = "SET_ACTIVE_MENU_ACTIVITY_BAR"; 
 
 /** Actions */
 export const openSidebar = () => {
@@ -34,6 +35,18 @@ export const exitFullScreen = () => {
   return (dispatch) => {
     dispatch({
       type: EXIT_FULLSCREEN,
+    });
+  }
+}
+
+export const setActiveMenuActivityBar = (menuName) => {
+  if(!menuName) {
+    console.log("Kosong");
+  }
+  return (dispatch) => {
+    dispatch({
+      type: SET_ACTIVE_MENU_ACTIVITY_BAR,
+      payload: menuName,
     });
   }
 }
