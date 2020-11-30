@@ -11,14 +11,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Example = () => {
-  const showSidebar = useSelector((state) => state.app.showSidebar);
+  const selectedLayout = useSelector((state) => state.builder.selectedLayout);
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Iframe>
-        <h1>Hello I am from iFrame</h1>
-        {showSidebar ? <p>Sidebar Active</p> : <span></span>}
-      </Iframe>
+      <Iframe>{selectedLayout ? <h1>{selectedLayout}</h1> : ""}</Iframe>
     </div>
   );
 };

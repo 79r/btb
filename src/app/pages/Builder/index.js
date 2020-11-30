@@ -1,6 +1,6 @@
 import React from "react";
-const Start = React.lazy(() => import("./Start"));
+const Builder = React.lazy(() => import("./Builder"));
 
-const StartScreen = () => <Start />;
+const BuilderScreen = () => <Builder />;
 
-export default StartScreen;
+export default BuilderScreen;
