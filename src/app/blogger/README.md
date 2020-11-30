@@ -1,0 +1,1 @@
+This folder contains blogger files such as template, widgets, etc..

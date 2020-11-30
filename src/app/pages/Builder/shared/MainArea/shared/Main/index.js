@@ -2,6 +2,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Iframe from "./Iframe";
 import { useSelector } from "react-redux";
 
+/** Layout */
+import Layout1 from "../../../../../../builder/Layouts/Layout1";
+import Layout2 from "../../../../../../builder/Layouts/Layout2";
+import Layout3 from "../../../../../../builder/Layouts/Layout3";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -15,7 +20,11 @@ const Example = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Iframe>{selectedLayout ? <h1>{selectedLayout}</h1> : ""}</Iframe>
+      <Iframe>
+        {selectedLayout === "LAYOUT_1" ? <Layout1 /> : <span></span>}
+        {selectedLayout === "LAYOUT_2" ? <Layout2 /> : <span></span>}
+        {selectedLayout === "LAYOUT_3" ? <Layout3 /> : <span></span>}
+      </Iframe>
     </div>
   );
 };
