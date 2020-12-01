@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import Zoom from "./Zoom";
-import Snackbar from "./Snackbar";
+import Snackbar from "../../../../../../components/shared/Snackbar";
 
 const useStyles = makeStyles((theme) => ({
   root: {

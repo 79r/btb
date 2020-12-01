@@ -1,0 +1,16 @@
+.LayoutContainer {
+  width: 100%;
+  padding: 0 16px;
+}
+
+.Preview_Section {
+  border: 1px solid #eee;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  min-height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px;
+}

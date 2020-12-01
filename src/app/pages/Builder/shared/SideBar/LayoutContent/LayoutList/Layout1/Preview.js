@@ -5,6 +5,7 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 import BasePreview from "../BasePreview";
 import previewImg from "./preview.png";
+import { LayoutTypes } from "../../../../../../../constants/LayoutTypes";
 
 /** Icons */
 import CheckIcon from "@material-ui/icons/Check";
@@ -27,7 +28,7 @@ const PreviewLayout1 = () => {
   const dispatch = useDispatch();
 
   const handleClick = () => {
-    dispatch(setLayout("LAYOUT_1"));
+    dispatch(setLayout(LayoutTypes.layout1));
   };
 
   return (
