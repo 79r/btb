@@ -7,7 +7,7 @@ import {
 } from "../actions/appActions";
 
 const initialState = {
-  showSidebar: true,
+  showSidebar: false,
   fullscreen: false,
   activeMenuActivityBar: "HOME", // default home is selected
 };

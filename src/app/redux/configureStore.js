@@ -1,14 +1,14 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import { persistStore, persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import { persistStore, persistReducer } from "redux-persist";
+import storage from "redux-persist/lib/storage";
 
 import rootReducer from "./reducers/rootReducer";
 
 const persistConfig = {
   key: "root",
   storage,
-}
+};
 
 const middlewares = [thunk];
 let devtools = (x) => x;
@@ -31,8 +31,8 @@ const configureStore = () => {
   let persistor = persistStore(store);
   return {
     store,
-    persistor
-  }
-}
+    persistor,
+  };
+};
 
 export default configureStore;
