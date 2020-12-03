@@ -13,7 +13,7 @@ export const theme = createMuiTheme({
       contrastText: "#fff",
     },
     secondary: {
-      light: "#ca91ff",
+      light: "#efefff",
       main: "#a441ff",
       dark: "#8a3fd0",
       contrastText: "#fff",
@@ -21,6 +21,6 @@ export const theme = createMuiTheme({
   },
 
   /** Custom variables */
-  activityBarWidth: 48,
+  activityBarWidth: 52,
   sideBarWidth: 282,
 });
