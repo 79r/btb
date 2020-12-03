@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 import { useDispatch } from "react-redux";
-import { setLayout } from "../../../../../../../redux/actions/builderActions";
+import { setLayout } from "../../../../../../../redux/actions/bloggerActions";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 import Button from "@material-ui/core/Button";
 import BasePreview from "../BasePreview";
