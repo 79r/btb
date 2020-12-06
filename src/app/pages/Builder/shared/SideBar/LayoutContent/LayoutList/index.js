@@ -1,9 +1,8 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import PreviewLayout1 from "./Layout1/Preview";
-import PreviewLayout2 from "./Layout2/Preview";
-import PreviewLayout3 from "./Layout3/Preview";
+import LayoutItem1 from "./Layout1/Layout1Container";
+import LayoutItem2 from "./Layout2/Layout2Container";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,15 +14,12 @@ const LayoutList = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <Grid container spacing={1}>
-        <Grid item xs={6}>
-          <PreviewLayout1 />
+      <Grid container>
+        <Grid item xs={12}>
+          <LayoutItem1 />
         </Grid>
-        <Grid item xs={6}>
-          <PreviewLayout2 />
-        </Grid>
-        <Grid item xs={6}>
-          <PreviewLayout3 />
+        <Grid item xs={12}>
+          <LayoutItem2 />
         </Grid>
       </Grid>
     </div>

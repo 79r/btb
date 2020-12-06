@@ -7,6 +7,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 0,
     marginBottom: theme.spacing(2),
     position: "relative",
+    height: 190,
+    overflow: "hidden",
+    borderRadius: ".2rem",
     "& img": {
       width: "100%",
     },
@@ -15,7 +18,6 @@ const useStyles = makeStyles((theme) => ({
 
 const BasePreview = ({ children }) => {
   const classes = useStyles();
-
   return <Box className={classes.root}>{children}</Box>;
 };
 

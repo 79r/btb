@@ -6,8 +6,8 @@ import Box from "@material-ui/core/Box";
 import IconButton from "@material-ui/core/IconButton";
 import Tooltip from "@material-ui/core/Tooltip";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import DesktopMacIcon from "@material-ui/icons/DesktopMac";
 import LayersIcon from "@material-ui/icons/Layers";
+import MenuIcon from "@material-ui/icons/Menu";
 import StyleIcon from "@material-ui/icons/Style";
 import SaveAltIcon from "@material-ui/icons/SaveAlt";
 import CodeIcon from "@material-ui/icons/Code";
@@ -79,14 +79,14 @@ const ActivityBar = () => {
           aria-label="Home"
           className={`${classes.button} ${active === "HOME" ? "active" : ""}`}
         >
-          <DesktopMacIcon fontSize="small" />
+          <LayersIcon fontSize="small" />
         </IconButton>
         <IconButton
           onClick={() => handleClickMenu("LAYOUT")}
           aria-label="Edit"
           className={`${classes.button} ${active === "LAYOUT" ? "active" : ""}`}
         >
-          <LayersIcon fontSize="small" />
+          <MenuIcon fontSize="small" />
         </IconButton>
         <IconButton
           onClick={() => handleClickMenu("STYLE")}

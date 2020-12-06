@@ -43,8 +43,6 @@ const PanelBar = () => {
     >
       <div className={classes.sidebar}>
         {activeMenu === "HOME" && <HomeContent />}
-      </div>
-      <div className={classes.sidebar}>
         {activeMenu === "LAYOUT" && <LayoutContent />}
       </div>
     </Drawer>
